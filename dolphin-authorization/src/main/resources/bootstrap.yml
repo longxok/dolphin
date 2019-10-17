@@ -1,0 +1,25 @@
+server:
+  port: 8000
+
+dolphin:
+  nacos:
+    server-addr: 127.0.0.1:8848
+
+spring:
+  application:
+    name: uaa-server
+  cloud:
+    nacos:
+      config:
+        server-addr: ${dolphin.nacos.server-addr}
+        file-extension: yml
+        shared-dataids: common.yml
+        refreshable-dataids: common.yml
+      discovery:
+        server-addr: ${dolphin.nacos.server-addr}
+
+encrypt:
+  key-store:
+    location: classpath:dolphin.jks
+    secret: dolphin!@#$
+    alias: dolphin

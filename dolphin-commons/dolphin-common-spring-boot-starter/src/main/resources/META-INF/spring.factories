@@ -1,0 +1,6 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.dolphin.common.config.BannerInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.dolphin.common.filter.TenantFilter,\
+com.dolphin.common.filter.TraceFilter

@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.dolphin.log.config.TtlMDCAdapterInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.dolphin.log.config.LogAutoConfigure

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.dolphin.sentinel.config.SentinelAutoConfigure

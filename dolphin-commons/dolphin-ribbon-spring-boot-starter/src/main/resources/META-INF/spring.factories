@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.dolphin.common.ribbon.RibbonAutoConfigure,\
+com.dolphin.common.ribbon.FeignAutoConfigure,\
+com.dolphin.common.ribbon.RestTemplateAutoConfigure,\
+com.dolphin.common.ribbon.filter.LbIsolationFilter
