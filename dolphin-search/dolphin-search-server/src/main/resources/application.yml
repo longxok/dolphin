@@ -1,10 +1,10 @@
 spring:
   data:
     elasticsearch:
-      cluster-name: ${zlt.elasticsearch.cluster-name}
-      cluster-nodes: ${zlt.elasticsearch.cluster-nodes}
+      cluster-name: ${dolphin.elasticsearch.cluster-name}
+      cluster-nodes: ${dolphin.elasticsearch.cluster-nodes}
 
-zlt:
+dolphin:
   indices:
     show: sys-log-*, mysql-slowlog-*, sys_user, point-log-*
   swagger:

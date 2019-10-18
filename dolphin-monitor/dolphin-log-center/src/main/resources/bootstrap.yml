@@ -1,5 +1,5 @@
 server:
-  port: 7100
+  port: 7200
 
 dolphin:
   nacos:
@@ -7,7 +7,7 @@ dolphin:
 
 spring:
   application:
-    name: search-center
+    name: log-center
   cloud:
     nacos:
       config:

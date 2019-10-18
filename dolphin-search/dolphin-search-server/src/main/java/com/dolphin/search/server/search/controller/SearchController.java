@@ -1,12 +1,13 @@
 package com.dolphin.search.server.search.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.central.common.model.*;
-import com.central.search.model.SearchDto;
-import com.central.search.service.ISearchService;
+import com.dolphin.common.model.PageResult;
+import com.dolphin.search.client.model.SearchDto;
+import com.dolphin.search.server.search.service.ISearchService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 通用搜索

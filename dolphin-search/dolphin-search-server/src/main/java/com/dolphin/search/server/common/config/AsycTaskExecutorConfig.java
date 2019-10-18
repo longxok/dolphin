@@ -1,5 +1,6 @@
 package com.dolphin.search.server.common.config;
 
+import com.dolphin.common.config.DefaultAsycTaskConfig;
 import org.springframework.context.annotation.Configuration;
 
 /**

@@ -1,8 +1,8 @@
 package com.dolphin.search.server.search.service.impl;
 
-import com.central.common.constant.CommonConstant;
-import com.central.search.model.AggItemVo;
-import com.central.search.service.IAggregationService;
+import com.dolphin.common.constant.CommonConstant;
+import com.dolphin.search.client.model.AggItemVo;
+import com.dolphin.search.server.search.service.IAggregationService;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.Aggregations;

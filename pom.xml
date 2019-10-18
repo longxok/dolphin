@@ -375,6 +375,7 @@
         <module>dolphin-user-center</module>
 
         <module>dolphin-search</module>
+        <module>dolphin-monitor</module>
 
     </modules>
 </project>

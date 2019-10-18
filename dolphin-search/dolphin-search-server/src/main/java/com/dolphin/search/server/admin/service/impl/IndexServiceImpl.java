@@ -2,10 +2,10 @@ package com.dolphin.search.server.admin.service.impl;
 
 import cn.hutool.core.util.StrUtil;
 import com.carrotsearch.hppc.cursors.ObjectCursor;
-import com.central.admin.model.IndexDto;
-import com.central.admin.model.IndexVo;
-import com.central.admin.service.IIndexService;
-import com.central.common.model.PageResult;
+import com.dolphin.common.model.PageResult;
+import com.dolphin.search.server.admin.model.IndexDto;
+import com.dolphin.search.server.admin.model.IndexVo;
+import com.dolphin.search.server.admin.service.IIndexService;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
 import org.elasticsearch.action.admin.indices.stats.IndexStats;
 import org.elasticsearch.action.admin.indices.stats.IndicesStatsRequestBuilder;

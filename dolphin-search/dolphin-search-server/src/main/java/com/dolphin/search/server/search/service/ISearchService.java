@@ -1,8 +1,8 @@
 package com.dolphin.search.server.search.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.central.common.model.PageResult;
-import com.central.search.model.SearchDto;
+import com.dolphin.common.model.PageResult;
+import com.dolphin.search.client.model.SearchDto;
 
 /**
  * @author zlt

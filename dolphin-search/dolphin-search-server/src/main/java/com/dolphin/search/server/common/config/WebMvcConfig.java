@@ -1,5 +1,6 @@
 package com.dolphin.search.server.common.config;
 
+import com.dolphin.common.config.DefaultWebMvcConfig;
 import org.springframework.context.annotation.Configuration;
 
 /**

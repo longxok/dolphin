@@ -1,5 +1,5 @@
 server:
-  port: 7100
+  port: 6500
 
 dolphin:
   nacos:
@@ -7,7 +7,11 @@ dolphin:
 
 spring:
   application:
-    name: search-center
+    name: sc-admin
+  security:
+    user:
+      name: 'admin'
+      password: 'admin'
   cloud:
     nacos:
       config:
@@ -17,3 +21,6 @@ spring:
         refreshable-dataids: common.yml
       discovery:
         server-addr: ${dolphin.nacos.server-addr}
+        metadata:
+          user.name: ${spring.security.user.name}
+          user.password: ${spring.security.user.password}

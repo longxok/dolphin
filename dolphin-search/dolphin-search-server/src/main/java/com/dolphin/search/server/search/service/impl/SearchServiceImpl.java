@@ -1,10 +1,10 @@
 package com.dolphin.search.server.search.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.central.common.model.PageResult;
-import com.central.search.model.SearchDto;
-import com.central.search.service.ISearchService;
-import com.central.search.util.SearchBuilder;
+import com.dolphin.common.model.PageResult;
+import com.dolphin.search.client.model.SearchDto;
+import com.dolphin.search.server.search.service.ISearchService;
+import com.dolphin.search.server.search.util.SearchBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
