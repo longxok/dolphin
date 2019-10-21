@@ -376,6 +376,7 @@
 
         <module>dolphin-search</module>
         <module>dolphin-monitor</module>
+        <module>dolphin-job</module>
 
     </modules>
 </project>
