@@ -93,13 +93,21 @@ public class OAuth2Controller {
             ClientDetails clientDetails = getClient(clientId, clientSecret);
             //保存租户id
             TenantContextHolder.setTenant(clientId);
+
             TokenRequest tokenRequest = new TokenRequest(MapUtils.EMPTY_MAP, clientId, clientDetails.getScope(), "customer");
+
             OAuth2Request oAuth2Request = tokenRequest.createOAuth2Request(clientDetails);
+
             Authentication authentication = authenticationManager.authenticate(token);
+
             SecurityContextHolder.getContext().setAuthentication(authentication);
+
             OAuth2Authentication oAuth2Authentication = new OAuth2Authentication(oAuth2Request, authentication);
+
             OAuth2AccessToken oAuth2AccessToken = authorizationServerTokenServices.createAccessToken(oAuth2Authentication);
+
             oAuth2Authentication.setAuthenticated(true);
+
             ResponseUtil.responseSucceed(objectMapper, response, oAuth2AccessToken);
         } catch (BadCredentialsException | InternalAuthenticationServiceException e) {
             exceptionHandler(response, badCredenbtialsMsg);
