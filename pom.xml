@@ -378,6 +378,7 @@
         <module>dolphin-monitor</module>
         <module>dolphin-job</module>
         <module>dolphin-nacos-all</module>
+        <module>dolphin-starting</module>
 
     </modules>
 </project>
