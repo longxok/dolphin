@@ -1,5 +1,7 @@
 package com.dolphin.spring.security.service;
 
+import com.dolphin.spring.security.dao.SysUserDAO;
+import com.dolphin.spring.security.model.SysUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +16,15 @@ import org.springframework.stereotype.Component;
 /**
  * 自定义登录接口(核心接口，加载用户特定的数据。)
  */
-@Component
+//@Component
 public class MyUserDetailsSerice implements UserDetailsService {
     // 日志 返回与作为参数传递的类对应的日志程序
     private static final Logger logger = LoggerFactory.getLogger(UserDetailsService.class);
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private SysUserDAO sysUserDAO;
     /**
      * 校验，根据用户名定位用户
      * @param username 标识需要其数据的用户的用户名。
@@ -30,6 +34,10 @@ public class MyUserDetailsSerice implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         String password = passwordEncoder.encode("123");
+        SysUser userQueryObject = new SysUser();
+        userQueryObject.setUsername(username);
+        userQueryObject.setPassword(password);
+        SysUser user = sysUserDAO.selectByObject(userQueryObject);
         logger.info("登录，用户名：{}，密码：{}", username,password);
         return new User(username, password, AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
     }

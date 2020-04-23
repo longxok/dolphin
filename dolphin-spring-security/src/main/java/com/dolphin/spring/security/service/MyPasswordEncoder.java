@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * 用于编码密码的服务接口的实现类。
  */
-@Component("passwordEncoder")
+//@Component("passwordEncoder")
 public class MyPasswordEncoder implements PasswordEncoder {
 
     /**
